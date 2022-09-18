@@ -2,14 +2,17 @@
     <head>
         <script>
             var websocket = new WebSocket('ws://localhost:3000/');
+            var se4 = new WebSocket('ws://localhost:80');
             websocket.onopen = function(event) {
-                websocket.send(JSON.stringify({'event': 'webui:connect'}));
+                se4.send(JSON.stringify({'event': 'webui:connect'}));
             };
             websocket.onmessage = function(event) {
                 console.log(event);
                 const elem = document.createElement("p");
                 elem.innerText = event.data;
                 document.getElementById("transcript").appendChild(elem);
+                const xd = document.createElement(" v");
+                document.getElementById("tra").append(xd);
             }
         </script>
     </head>
