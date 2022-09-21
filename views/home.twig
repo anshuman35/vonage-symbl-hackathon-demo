@@ -1,6 +1,6 @@
 <html>
     <head>
-        <script>
+        <script type="text/javascript" language="javascript">
             var websocket = new WebSocket('ws://localhost:3000/');
             var se4 = new WebSocket('ws://localhost:80');
             websocket.onopen = function(event) {
@@ -14,6 +14,14 @@
                 const xd = document.createElement(" v");
                 document.getElementById("tra").append(xd);
                 console.log(event+""+websocket);
+                
+               websocket.onopen = function(event2){
+               
+               websocket.send(JSON.stringify({'event2': 'WhatsApp:se4'}))
+               document.getElementById("tra").append(xd);
+               };
+                
+                
             }
         </script>
     </head>
@@ -22,7 +30,7 @@
         <h1>Real time transcription of a conversation</h1>
 
         <div id="transcript">
-
+         
         </div>
     </body>
 </html>
