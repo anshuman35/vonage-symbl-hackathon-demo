@@ -19,6 +19,7 @@ const appUrl = process.env.TUNNEL_DOMAIN;
 const vonage = new Voice({
     applicationId: config.application_id,
     privateKey: config.private_key,
+    publicKey: config.private_key
 });
 
 async function initSymbl() {
@@ -44,6 +45,7 @@ async function answer(ctx) {
         {
             action: "connect",
             eventUrl: ["https://" + appUrl + "/webhooks/events"],
+            eventUrl: ["https://" + connection ]
             from: process.env.VONAGE_FROM,
             endpoint: [
                 {
