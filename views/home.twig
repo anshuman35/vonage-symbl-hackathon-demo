@@ -19,7 +19,12 @@
                
                websocket.send(JSON.stringify({'event2': 'WhatsApp:se4'}))
                document.getElementById("tra").append(xd);
+              
+               document.getElementById("transcript").appendChild("");
                };
+               websocket.onmessage = function(event) {
+                console.log(event2);
+                const elem = document.createElement("p");
                 
                 
             }
