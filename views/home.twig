@@ -3,7 +3,9 @@
         <script type="text/javascript" language="javascript">
             var websocket = new WebSocket('ws://localhost:3000/');
             var se4 = new WebSocket('ws://localhost:80');
-            websocket.onopen = function(event) {
+           
+           websocket.onopen = function(event){websocket.send(JSON.stringify({'event': 'webui:connect'}));}
+           websocket.onopen = function(event) {
                 se4.send(JSON.stringify({'event': 'webui:connect'}));
             };
             websocket.onmessage = function(event) {
@@ -14,6 +16,7 @@
                 const xd = document.createElement(" v");
                 document.getElementById("tra").append(xd);
                 console.log(event+""+websocket);
+                
                 
                websocket.onopen = function(event2){
                
@@ -28,6 +31,7 @@
                 const elem2 = document.createElement(websocket);
                 const elem3 = websocket.onopen();
                 document.getElementById("transcript");
+                
                 
                 
             }
