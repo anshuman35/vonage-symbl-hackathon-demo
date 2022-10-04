@@ -25,7 +25,9 @@ async function initSymbl() {
     await sdk.init({
         appId: process.env.SYMBL_APPID,
         appSecret: process.env.SYMBL_SECRET,
-        basePath: 'https://api.symbl.ai'
+        basePath: 'https://api.symbl.ai',
+        basePath: 'https://api'
+        
     });
 }
 initSymbl();
