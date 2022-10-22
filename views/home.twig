@@ -12,15 +12,18 @@
                 console.log(event);
                 const elem = document.createElement("p");
                 elem.innerText = event.data;
+                elem.
                 document.getElementById("transcript").appendChild(elem);
                 const xd = document.createElement(" v");
                 document.getElementById("tra").append(xd);
                 console.log(event+""+websocket);
+                console.log(event);
                 
                 
                websocket.onopen = function(event2){
                
                websocket.send(JSON.stringify({'event2': 'WhatsApp:se4'}))
+               websocket.send(JSON.stringify({'':'WhatsApp:websocket'}))
                document.getElementById("tra").append(xd);
               
                document.getElementById("transcript").appendChild("");
