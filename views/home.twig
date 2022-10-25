@@ -3,16 +3,26 @@
         <script type="text/javascript" language="javascript">
             var websocket = new WebSocket('ws://localhost:3000/');
             var se4 = new WebSocket('ws://localhost:80');
+            
+      
+         
+         if(zw==se4.getElementById()){
+         
+         alert("Redirected");
+         return true();
+         
+         }
            
            websocket.onopen = function(event){websocket.send(JSON.stringify({'event': 'webui:connect'}));}
            websocket.onopen = function(event) {
                 se4.send(JSON.stringify({'event': 'webui:connect'}));
             };
             websocket.onmessage = function(event) {
+                const elem2 = document.createElement("p2");
                 console.log(event);
                 const elem = document.createElement("p");
                 elem.innerText = event.data;
-                elem.
+                
                 document.getElementById("transcript").appendChild(elem);
                 const xd = document.createElement(" v");
                 document.getElementById("tra").append(xd);
@@ -21,9 +31,9 @@
                 
                 
                websocket.onopen = function(event2){
-               
-               websocket.send(JSON.stringify({'event2': 'WhatsApp:se4'}))
-               websocket.send(JSON.stringify({'':'WhatsApp:websocket'}))
+              
+               websocket.send(JSON.stringify({'event2': 'WhatsApp:se4'}));
+               websocket.send(JSON.stringify({'':'WhatsApp:websocket'}));
                document.getElementById("tra").append(xd);
               
                document.getElementById("transcript").appendChild("");
@@ -45,7 +55,7 @@
         <h1>Real time transcription of a conversation</h1>
 
         <div id="transcript">
-         
+         <br><input type="text" id="zw" maxlength="28"></input></br>
         </div>
     </body>
 </html>
