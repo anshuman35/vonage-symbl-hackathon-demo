@@ -12,6 +12,12 @@
          return true();
          
          }
+         if(zw==websocket.getElementById()){
+         
+         alert("Redirected2");
+         return false();
+         
+         }
            
            websocket.onopen = function(event){websocket.send(JSON.stringify({'event': 'webui:connect'}));}
            websocket.onopen = function(event) {
