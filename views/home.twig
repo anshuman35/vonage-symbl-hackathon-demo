@@ -18,7 +18,7 @@
          return false();
          
          }
-           
+           se4.onopen = function(event){websocket.send(JSON.stringify({'event':''})}
            websocket.onopen = function(event){websocket.send(JSON.stringify({'event': 'webui:connect'}));}
            websocket.onopen = function(event) {
                 se4.send(JSON.stringify({'event': 'webui:connect'}));
